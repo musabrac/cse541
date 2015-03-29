@@ -1,0 +1,23 @@
+<html>
+<head>
+  <title>File Upload</title>
+</head>
+<body>
+  <form>
+    <input type="file" name="fileBrowser" accept="*" onchange="showMessage()">
+    <br />
+    <textarea rows="4" cols="50" name="fileName" style="border:0">    
+    </textarea>
+  </form>
+
+<script>
+function showMessage(){
+  var fB = document.forms[0].fileBrowser;
+  var fN = document.forms[0].fileName;
+  fN.value = "You have chosen the file " + fB.value
+  + " and its size is " + fB.files[0].size + " bytes.";
+}
+</script>
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+<html>
+<head>
+  <title>Appender</title>
+</head>
+<body>
+  <form>
+    <input type="button" onClick="appendLine()" value="Click to add lines">
+  </form>
+  <hr />
+  <div id="messages"></div><hr />
+  <script>
+  var count=1;
+  function appendLine(){
+    var msg = document.getElementById("messages");
+    msg.innerHTML += "This is line " + count++ + "<br />";
+  };
+  </script>
+</body>
+</html>

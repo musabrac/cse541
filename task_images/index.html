@@ -1,0 +1,44 @@
+<html>
+<head>
+  <title>Image viewer</title>
+  <style>
+  section {
+    max-width:300px;
+  }
+  img {
+    max-width:80px;
+    display:inline-block;
+    width:30%;
+  }
+  </style>
+</head>
+
+<body>
+  <p>
+    <a href="#" onClick="changeCat('lion')">Lions</a> | <a href="#" onClick="changeCat('tiger')">Tigers</a> | <a href="#" onClick="changeCat('elephant')">Elephants</a>
+  </p>
+  <div>
+    <section name="imgBox">
+      <img name="img01" src="img/lion01.jpg">
+      <img name="img02" src="img/lion02.jpg">
+      <img name="img03" src="img/lion03.jpg">
+      <img name="img04" src="img/lion04.jpg">
+      <img name="img05" src="img/lion05.jpg">
+      <img name="img06" src="img/lion06.jpg">
+      <img name="img07" src="img/lion07.jpg">
+      <img name="img08" src="img/lion08.jpg">
+      <img name="img09" src="img/lion09.jpg">
+    </section>
+  </div>
+
+  <script>
+  function changeCat (cat){
+    for (var i = 0; i < document.images.length; i++) {
+      var fileName = cat + "0" + (i+1) + ".jpg";
+      var img_name = "img0"+(i+1);
+      document.images[img_name].src = "img/"+fileName;
+    };
+  };
+  </script>
+</body>
+</html>
